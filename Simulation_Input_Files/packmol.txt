@@ -1,0 +1,38 @@
+#
+# This packmol input file prepares a simulation cell with a 50 mM concentration of a sugar, using 20 copies of it.
+#
+
+# Minimum distance between molecules
+
+tolerance 2.0
+
+# The file type of input and output files is PDB.
+
+filetype pdb
+
+# The name of the output file.
+
+output 50mM_B-Neu5Ac.pdb
+
+# Molecules will be packed in a box defined by the minimum coordinates x_min, y_min and z_min = 0, 0, 0 and maximum 
+# coordinates x_max, y_max, z_max.  
+
+structure B-Neu5Ac.pdb 
+  number 20 
+  inside box 0.0 0.0 0.0 87.26 87.26 87.26 
+end structure
+
+structure ../../../Water_and_Ions/Na.pdb
+  number 20
+  inside box 0.0 0.0 0.0 87.26 87.26 87.26
+end structure
+
+structure ../../../Water_and_Ions/OPC.pdb
+  number 22026
+  inside box 0.0 0.0 0.0 87.26 87.26 87.26
+end structure
+
+# add TER cards
+add_amber_ter
+amber_ter_preserve
+
