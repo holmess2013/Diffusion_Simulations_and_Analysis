@@ -1,0 +1,2 @@
+## aggregation_from_MD
+This script will measure the average aggregate size per frame, and the max aggregate size from a simulation of multiple carbohydrates. The main script is "aggregation_one_trajectory.py", which imports the "aggregation" module. The aggregation module does most of the heavy lifting. The input required is a wrapped, autoimaged MD trajectory that has been converted to one file containing a series of PDBs, with water stripped. In this example, a simulation of 20 x B-D-Glc that was simulated in the OPC water model in AMBER is provided.
