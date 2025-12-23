@@ -1,0 +1,12 @@
+source /cm/shared/apps/amber20/dat/leap/cmd/leaprc.GLYCAM_06j-1
+source leaprc.water.opc
+ 
+loadOff solvents.lib
+WAT = OPC
+mol=loadpdb structure.pdb
+setBox mol "vdw" 0  
+
+saveamberparm mol CPLX_Neut_Sol.parm7 CPLX_Neut_Sol.rst7
+savepdb mol CPLX_Neut_Sol.pdb
+quit
+

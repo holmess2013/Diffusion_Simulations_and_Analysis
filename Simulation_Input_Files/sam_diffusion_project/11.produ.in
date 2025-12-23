@@ -1,0 +1,22 @@
+# Production MD for 10 ns in the NVE ensemble, trajectory and restart file saved every 10 ps
+ &cntrl
+  imin = 0,
+  irest = 0,
+  ntx = 5,
+  ntb = 2,
+  ntp = 1,
+  taup = 999999,
+  cut = 8.0,
+  ntc = 2,
+  ntf = 2,
+  ntt = 0,
+  nstlim = 5000000,
+  dt = 0.002,
+  ntwx = 5000,
+  ntpr = 5000,
+  ntwe = 5000,
+  ntwprt = 0,
+  ioutfm = 1,
+  iwrap = 0,
+  ntr = 0,
+ &end
